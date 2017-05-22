@@ -40,10 +40,10 @@ class ProductController extends HomeController{
 		// 		$criteria->params[':max'] = $max;
 		// 	}
 		// }
-		$infos = ProductExt::model()->normal()->sorted()->getList($criteria,12);
+		$infos = ProductExt::model()->normal()->sorted()->getList($criteria,8);
 		$data = $infos->data;
 		$pager = $infos->pagination;
-		$this->render('list',['infos'=>$data,'pager'=>$pager,'cate'=>$cate]);
+		$this->render('list',['products'=>$data,'pager'=>$pager,'cate'=>$cate,'cates'=>TagExt::getTagArrayByCate('hjlx')]);
 	}
 	/**
 	 * [actionInfo 产品详情]

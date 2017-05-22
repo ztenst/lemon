@@ -3,12 +3,14 @@ class IndexController extends HomeController
 {
     public function actionIndex()
     {
-        $this->banner = 'gh1';
+        $this->banner = '';
     	$this->layout = '/layouts/base';
-    	// 六个服务
-    	$serves = ArticleExt::model()->normal()->findAll(['condition'=>'cid=44','limit'=>6]);
-    	// 八个设备
+    	// 两篇文章
+    	$serves = ArticleExt::model()->normal()->findAll(['condition'=>'cid=56','limit'=>2]);
+    	// 八个案例
     	$products = ProductExt::model()->normal()->findAll(['limit'=>8]);
+        //案例类型
+        $cates = TagExt::getTagArrayByCate('hjlx');
         if(Yii::app()->request->getIsPostRequest()) {
 
             $data['name'] = Yii::app()->request->getPost('name');
@@ -21,7 +23,10 @@ class IndexController extends HomeController
             echo json_encode(['code'=>0,'data'=>'']);
             Yii::app()->end();
         }
-        $this->render('index',['serves'=>$serves,'products'=>$products]);
+        //封面图
+        $imgs = SiteExt::getAttr('qjpz','pcIndexImages');
+        // var_dump($cates);exit;
+        $this->render('index',['news'=>$serves,'products'=>$products,'imgs'=>$imgs,'cates'=>$cates]);
     }
 
     public function actionAbout()

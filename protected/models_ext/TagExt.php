@@ -15,7 +15,7 @@ class TagExt extends Tag
         'direct' => [
             'wzlm' => '文章栏目',
             // 'xcfl' => '相册分类',
-            'hjlx' => '产品类型',
+            'hjlx' => '案例类型',
             // 'ptpz' => '葡萄品种',
             // 'hjxl' => '红酒系列',
             // 'jzdq' => '酒庄地区',

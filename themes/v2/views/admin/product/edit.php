@@ -40,18 +40,18 @@ $this->breadcrumbs = array('产品管理', $this->pageTitle);
     <div class="col-md-2"><?php echo $form->error($article, 'cid') ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label">产品特点</label>
+    <label class="col-md-2 control-label">简介</label>
     <div class="col-md-8">
-        <?php echo $form->textArea($article, 'td', array('id'=>'ArticleExt_content')); ?>
+        <?php echo $form->textArea($article, 'desc', array('id'=>'ArticleExt_content')); ?>
     </div>
-    <div class="col-md-2"><?php echo $form->error($article, 'td')  ?></div>
+    <div class="col-md-2"><?php echo $form->error($article, 'desc')  ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label">产品参数</label>
+    <label class="col-md-2 control-label">内容</label>
     <div class="col-md-8">
-        <?php echo $form->textArea($article, 'cs', array('id'=>'ArticleExt_content1')); ?>
+        <?php echo $form->textArea($article, 'content', array('id'=>'ArticleExt_content1')); ?>
     </div>
-    <div class="col-md-2"><?php echo $form->error($article, 'cs')  ?></div>
+    <div class="col-md-2"><?php echo $form->error($article, 'content')  ?></div>
 </div>
 <div class="form-group">
     <label class="col-md-2 control-label text-nowrap">封面图</label>

@@ -52,15 +52,11 @@ class SiteExt extends Site{
     // 属性分类
     public static $cateTag = [
         'qjpz'=> [
-            // 'pcIndexImages'=>['type'=>'multiImage','max'=>4,'name'=>'pc首页轮播图'],
+            'pcIndexImages'=>['type'=>'multiImage','max'=>4,'name'=>'pc首页轮播图'],
             'pcLogo'=>['type'=>'image','max'=>1,'name'=>'pc版logo'],
             'sitePhone'=>['type'=>'text','name'=>'站点客服'],
             'qq'=>['type'=>'text','name'=>'联系qq'],
             'mail'=>['type'=>'text','name'=>'邮箱'],
-            'khs'=>['type'=>'text','name'=>'客户数'],
-            'xmgs'=>['type'=>'text','name'=>'项目个数'],
-            'fwgs'=>['type'=>'text','name'=>'服务个数'],
-            'clnf'=>['type'=>'text','name'=>'成立年份'],
             'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
             'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
             'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],

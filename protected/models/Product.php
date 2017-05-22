@@ -11,6 +11,8 @@
  * @property string $cs
  * @property string $td
  * @property integer $sort
+ * @property string $desc
+ * @property string $content
  * @property string $data_conf
  * @property integer $status
  * @property integer $deleted
@@ -37,11 +39,11 @@ class Product extends CActiveRecord
 		return array(
 			array('created', 'required'),
 			array('cid, sort, status, deleted, created, updated', 'numerical', 'integerOnly'=>true),
-			array('name, image', 'length', 'max'=>255),
-			array('cs, td, data_conf', 'safe'),
+			array('name, image, desc', 'length', 'max'=>255),
+			array('cs, td, content, data_conf', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, cid, image, cs, td, sort, data_conf, status, deleted, created, updated', 'safe', 'on'=>'search'),
+			array('id, name, cid, image, cs, td, sort, desc, content, data_conf, status, deleted, created, updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +71,8 @@ class Product extends CActiveRecord
 			'cs' => 'Cs',
 			'td' => 'Td',
 			'sort' => 'Sort',
+			'desc' => 'Desc',
+			'content' => 'Content',
 			'data_conf' => 'Data Conf',
 			'status' => 'Status',
 			'deleted' => 'Deleted',
@@ -102,6 +106,8 @@ class Product extends CActiveRecord
 		$criteria->compare('cs',$this->cs,true);
 		$criteria->compare('td',$this->td,true);
 		$criteria->compare('sort',$this->sort);
+		$criteria->compare('desc',$this->desc,true);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('data_conf',$this->data_conf,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('deleted',$this->deleted);
