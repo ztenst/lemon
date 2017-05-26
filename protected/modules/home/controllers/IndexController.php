@@ -4,6 +4,7 @@ class IndexController extends HomeController
     public function actionIndex()
     {
         $this->banner = '';
+        $this->jsDesc = 'indexMain';
     	$this->layout = '/layouts/base';
     	// 两篇文章
     	$serves = ArticleExt::model()->normal()->findAll(['condition'=>'cid=56','limit'=>2]);
@@ -38,8 +39,11 @@ class IndexController extends HomeController
 
     public function actionContact()
     {
-        $info = ArticleExt::model()->getLx()->normal()->find();
-        // var_dump($info->attributes);exit;
-        $this->render('contact',['info'=>$info]);
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('cid=:cid');
+        $criteria->params[':cid'] = 52;
+        $infos = ArticleExt::model()->normal()->find($criteria);
+        // var_dump($infos);exit;
+        $this->render('contact',['infos'=>$infos]);
     }
 }

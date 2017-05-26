@@ -3,22 +3,24 @@
  * 服务的控制器
  */
 class NewsController extends HomeController{
+
 	/**
 	 * 服务项目
 	 */
-	public function actionList()
+	public function actionList($cate='')
 	{
-		$criteria = new CDbcriteria;
+		$this->banner='';
+		$criteria = new CDbCriteria;
 		$criteria->order = 'sort desc,updated desc';
 		$criteria->addCondition('status=1 and deleted=0');
 		if($cate){
 			$criteria->addCondition('cid=:cid');
 			$criteria->params[':cid'] = $cate;
 		}
-		$infos = ArticleExt::model()->normal()->sorted()->getList($criteria,8);
+		$infos = ArticleExt::model()->normal()->common()->sorted()->getList($criteria,8);
 		$data = $infos->data;
 		$pager = $infos->pagination;
-		$this->render('list',['products'=>$data,'pager'=>$pager,'cate'=>$cate,'cates'=>TagExt::getTagArrayByCate('wzlm')]);
+		$this->render('list',['news'=>$data,'pager'=>$pager,'cate'=>$cate,'cates'=>TagExt::getArticleCates()]);
 	}
 
 	/**

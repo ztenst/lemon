@@ -12,6 +12,7 @@ class HomeController extends Controller
     //描述
     private $description;
     public $banner = 'nobanner';
+    public $jsDesc = 'baseMain';
     /**
      * @var string 页面底部
      */

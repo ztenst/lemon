@@ -284,4 +284,14 @@ class TagExt extends Tag
         }
         return $tagArray;
     }
+
+    public static function getArticleCates(){
+        $tags=TagExt::model()->getTagByCate('wzlm')->normal()->findAll();
+        $tagArray=[];
+        foreach($tags as $tag){
+            if(!in_array($tag->id, ArticleExt::$cates))
+                $tagArray[$tag->id]=$tag->name;
+        }
+        return $tagArray;
+    }
 }

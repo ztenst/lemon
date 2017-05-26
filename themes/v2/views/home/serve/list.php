@@ -1,23 +1,23 @@
-<?php $this->pageTitle = '案例列表'?>
+<?php $this->pageTitle = '资讯中心'?>
 
 <div class="npagePage Pageanli" id="mproject">
             <div class="content">
                 <div class="header" id="plheader">
-                    <p class="title">项目案例</p>
+                    <p class="title">资讯中心</p>
                     <p class="subtitle">静静装逼</p>
                 </div>
                 <ul id="category">
-                <li ><a  class="<?=!$cate?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>"><?='不限'?></a></li>
+                 <li ><a  class="<?=!$cate?'active':''?>" href="<?=$this->createUrl('/home/news/list')?>"><?='不限'?></a></li>
                     <?php if($cates) foreach ($cates as $key => $value) { ?>
-                <li><a  class="<?=$cate==$key?'active':''?>" href="<?=$this->createUrl('/home/product/list',['cate'=>$key])?>"><?=$value?></a></li>
+                <li><a  class="<?=$cate==$key?'active':''?>" href="<?=$this->createUrl('/home/news/list',['cate'=>$key])?>"><?=$value?></a></li>
            <?php } ?>
                 </ul>
                 <div id="projectlist" class="module-content">
                     <div class="wrapper">
                         <ul class="content_list">
-                        <?php if($products) foreach ($products as $key => $value) {?>
+                        <?php if($newss) foreach ($newss as $key => $value) {?>
                             <li class="projectitem">
-                                <a href="<?=$this->createUrl('/home/product/info',['id'=>$value->id])?>" target="_blank">
+                                <a href="<?=$this->createUrl('/home/news/info',['id'=>$value->id])?>" target="_blank">
                                     <div class="project_img"><img src="<?=ImageTools::fixImage($value->image,500,320)?>" width="500" height="320" /></div>
                                     <div class="project_info">
                                         <div>
@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="his->createUrl('/home/product/info',['id'=>$value->id])?>" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                                <a href="his->createUrl('/home/news/info',['id'=>$value->id])?>" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
                             </li>
                         <?php } ?>
                         </ul>

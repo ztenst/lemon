@@ -8,6 +8,8 @@ class ArticleExt extends Article{
     /**
      * @var array 状态
      */
+    public static $cates=[52,44,45,56,57,58,59,59,61,60];
+
     static $status = array(
         0 => '禁用',
         1 => '启用',
@@ -75,9 +77,17 @@ class ArticleExt extends Article{
     public function scopes()
     {
         $alias = $this->getTableAlias();
+        $a ='';
+        foreach (self::$cates as $key => $value) {
+            $a.=' cid!='.$value.' and';
+        }
+        $a = trim($a,'and');
         return array(
             'sorted' => array(
                 'order' => 'sort desc',
+            ),
+            'common' => array(
+                'condition' =>$a,
             ),
             'normal' => array(
                 'condition' => 'status=1 and deleted=0',
