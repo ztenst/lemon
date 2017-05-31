@@ -3,6 +3,8 @@ class IndexController extends HomeController
 {
     public function actionIndex()
     {
+        $this->jsObj='indexMain';
+
         $this->banner = '';
     	$this->layout = '/layouts/base';
     	// 两篇文章
@@ -38,8 +40,11 @@ class IndexController extends HomeController
 
     public function actionContact()
     {
-        $info = ArticleExt::model()->getLx()->normal()->find();
+        $criteria = new CDbCriteria;
+        $criteria->addcondition('cid=:cid');
+        $criteria->params[':cid']='52';
+        $infos = ArticleExt::model()->normal()->find($criteria);
         // var_dump($info->attributes);exit;
-        $this->render('contact',['info'=>$info]);
+        $this->render('contact',['infos'=>$infos]);
     }
 }
