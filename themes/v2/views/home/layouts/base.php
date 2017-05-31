@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/home/style/1124.css">
     <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl?>/static/home/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl?>/static/home/js/org1480746227.js" data-main="<?=$this->jsObj?>"></script>
+    <style>
+        a[href="http://www.uemo.net"]{display:none}
+    </style>
     <title><?=$this->pageTitle?></title>
 </head>
 

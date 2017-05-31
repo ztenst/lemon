@@ -1,6 +1,7 @@
 <?php
 class NewsController extends HomeController{
 	public function actionList($cate=''){
+		$this->banner = '';
 		$criteria = new CDbCriteria;
         $criteria->order = 'sort desc,updated desc';
         $criteria->addCondition('status=1 and deleted=0');
