@@ -20,6 +20,7 @@ class ProductController extends HomeController{
 			$criteria->params[':cid'] = $cate;
 		}
 		$infos = ProductExt::model()->normal()->sorted()->getList($criteria,8);
+		//var_dump($infos);exit;
 		$data = $infos->data;
 		$pager = $infos->pagination;
 		$this->render('list',['products'=>$data,'pager'=>$pager,'cate'=>$cate,'cates'=>TagExt::getTagArrayByCate('hjlx')]);

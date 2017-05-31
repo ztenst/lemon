@@ -11,13 +11,14 @@ class NewsController extends HomeController{
 		}
 		$infos = ArticleExt::model()->normal()->common()->sorted()->getList($criteria,8);
 		$data = $infos->data;
-		//var_dump($data);
+		//var_dump($data);exit;
 		$pager = $infos->pagination;
 		$this->render('list',['news'=>$data,'pager'=>$pager,'cate'=>$cate,'cates'=>TagExt::getArticleCate()]);
 	}
 
 	public function actionInfo($id=''){
 		$info = ArticleExt::model()->findByPk($id);
+		var_dump($info);exit;
 		if(!$info){
 			$this->redirect('list');
 		}

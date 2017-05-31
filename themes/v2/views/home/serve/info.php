@@ -1,49 +1,49 @@
-<?php $this->pageTitle = '上海弘钢机械设备有限公司-业务中心'?>
-<div class="npagePage post">
-            <div id="pageTarget" class="module">
-                <div class="module_container">
-                    <div class="container_target wow">您的位置：<a href="<?=$this->createUrl('/home/index/index')?>">首页</a><i class="fa fa-angle-right"></i><a href="#">业务中心</a></div>
-                    <div class="clear"></div>
-                </div>
-            </div>
+<?php $this->pageTitle = $info->title?>
+
+
+        <div class="npagePage default">
             <div class="content">
-                <div class="mlistpost service module">
-                    <div class="module_container">
-                        <div class="container_content">
-                            <div class="content_wrapper">
-                                <div id="postWrapper">
-                                    <div id="postNav">
-                                        <div class="wrapper scrollFixed" data-sf-top="20">
-                                            <ul class="nav bgMove">
-                                            <?php if($cates) foreach ($cates as $key => $value) {?>
-                                                <li class="navitem"><a href="<?=$this->createUrl('/home/serve/info',['id'=>$key])?>" class="<?=$info?($info['id']==$key?'active':''):''?>"><span data-title="<?=$value['title']?>"><?=$value['title']?></span><i class="fa fa-angle-right"></i></a></li>
-                                             <?php } ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="postContent">
-                                        <div id="postInfo">
-                                            <p class="title"><?=$info['title']?></p>
-                                            <p class="subtitle"><?=date('Y-m-d',$info['created'])?></p>
-                                        </div>
-                                        <div class="postbody">
-                                            <p><img src="<?=ImageTools::fixImage($info['image'],600,400)?>" /></p>
-                                            <p>
-                                                <br/>
-                                            </p>
-                                            <?=$info['content']?>
-                                            <p>
-                                                <br/>
-                                            </p>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+                <div class="header">
+                    <p class="title"><?=$info->title?></p>
+                </div>
+                <div class="fw postbody">
+                    <table style="width: 1060px;" width="-412" border="0">
+                        <tbody>
+                            <tr class="firstRow">
+                                <td style="width: 40%; word-break: break-all;" valign="top">
+                                    <p style="text-align: left;">
+                                        <br />
+                                    </p>
+                                    <p class="ordinary-output target-output"><span style="color: rgb(38, 38, 38);"><strong><span style="font-size: 16px;"><?=$info->content?></span></strong>
+                                        </span>
+                                    </p>
+                                    
+                                </td>
+                                <td style="width: 5%; word-break: break-all; text-align: left;">&nbsp;</td>
+                                <td style="width: 55%; word-break: break-all;" valign="top">
+                                    <p style="text-align: left;"><span style="font-size: 16px;"></span><img alt="undefined" title="undefined" src="<?=ImageTools::fixImage($info->image,520,300)?>" /></p>
+                                    <p>
+                                        <br />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 1060px;">
+                        <tbody>
+                            <tr class="firstRow"></tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    
+                    
+                    
+                   
+                </div>
+                <div id="pages"></div>
+                <div id="pageswitch">
+                    
+                    <div class="clear"></div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 class CompanyController extends HomeController{
 
 	public function actionIndex(){
+		$this->banner = '';
 		$criteria = new CDbCriteria;
 		$criteria->addcondition('cid=:cid');
 		$criteria->params[':cid']=60;

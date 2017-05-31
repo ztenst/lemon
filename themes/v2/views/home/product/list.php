@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="his->createUrl('/home/product/info',['id'=>$value->id])?>" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                                <!-- <a href="$this->createUrl('/home/product/info',['id'=>$value->id])?>" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a> -->
                             </li>
                         <?php } ?>
                         </ul>
