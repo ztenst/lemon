@@ -19,7 +19,7 @@
             <div class="wrapper">
                 <?php foreach ($news as $key => $value) {?>
                     <div id="newsitem_0" class="wow newstitem left">
-                        <a  href="<?=$this->createUrl('/home/news/info'),['id'=>$value->id]?>" class="newscontent" target="_blank">
+                        <a  href="<?=$this->createUrl('/home/news/info',['id'=>$value->id])?>" class="newscontent" target="_blank">
                             <div class="news_wrapper">
                                 <div class="newsbody">
                                     <p class="date"><span class="md"><?=date('Y',$value->updated)?><span>-</span></span><span class="year    "><?=date('m-d',$value->updated)?></span></p>
