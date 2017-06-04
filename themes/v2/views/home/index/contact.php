@@ -10,11 +10,11 @@
             <div class="content">
                 <div class="header">
                     <p class="title"><?=$infos->title?></p>
-                    <p class="subtitle">Contact</p>
+                    <p class="subtitle">contacts</p>
                 </div>
                 <div class="fw postbody">
                     <hr />
-                    <p><?=$infos->content?>
+                    <p><?=SiteExt::getAttr('qjpz','contactWords')?>
                     </p>
                     <hr />
                 </div>

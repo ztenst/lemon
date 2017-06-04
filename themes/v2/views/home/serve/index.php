@@ -2,7 +2,7 @@
 
         <div class="npagePage Pageservice">
             <div id="banner">
-                <div style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479716722145.jpg);"></div>
+                <img src="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','fuwufanweiImages'))?>">
             </div>
             <div class="content">
                 <div class="header">
