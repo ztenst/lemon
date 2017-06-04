@@ -38,7 +38,7 @@
                 <div class="mask"></div>
                 <a target="_blank">
                     <div>
-                        <p class="title ellipsis">我们超级专业的</p>
+                        <p class="title ellipsis"><?=SiteExt::getAttr('qjpz','pcIndexImageWords')?></p>
                     </div>
                     <div class="sliderArrow fa fa-angle-down"></div>
                 </a>

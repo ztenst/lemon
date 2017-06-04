@@ -43,6 +43,8 @@ class SiteExt extends Site{
         'fwgs'=>'0',
         // 成立年份
         'clnf'=>'0',
+        // 首页头图文字
+        'pcIndexImageWords'=>'',
 
     ];
     public static $cateName = [
@@ -63,7 +65,8 @@ class SiteExt extends Site{
             'pcLxwm'=>['type'=>'image','max'=>1,'name'=>'pc联系我们广告图'],
             // 'pcIndexAbout'=>['type'=>'image','max'=>1,'name'=>'pc首页关于背景图'],
             // 'pcIndexServe'=>['type'=>'image','max'=>1,'name'=>'pc首页服务背景图'],
-            // 'pcNewsTop'=>['type'=>'image','max'=>1,'name'=>'pc资讯列表头图'],
+            'pcNewsTop'=>['type'=>'image','max'=>1,'name'=>'pc资讯列表头图'],
+            'pcIndexImageWords'=>['type'=>'text','name'=>'首页头图文字'],
             // 'pcContactTop'=>['type'=>'image','max'=>1,'name'=>'pc联系列表头图'],
             // 'pcServeTop'=>['type'=>'image','max'=>1,'name'=>'pc服务列表头图'],
             // 'pcTeamTop'=>['type'=>'image','max'=>1,'name'=>'pc团队列表头图'],

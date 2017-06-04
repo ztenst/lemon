@@ -1,7 +1,7 @@
 <?php $this->pageTitle = '资讯列表'?>
 <div id="newsPage" class="npagePage Pagenews">
     <div id="banner">
-        <div style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479716881333.jpg);"></div>
+        <div style="background-image:url(<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcNewsTop'))?>);"></div>
     </div>
     <div class="content">
         <div class="header">
