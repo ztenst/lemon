@@ -40,6 +40,7 @@ class IndexController extends HomeController
 
     public function actionContact()
     {
+        $this->banner = '';
         $criteria = new CDbCriteria;
         $criteria->addcondition('cid=:cid');
         $criteria->params[':cid']='52';

@@ -38,7 +38,7 @@
                 <div class="mask"></div>
                 <a target="_blank">
                     <div>
-                        <p class="title ellipsis">我们超级专业的</p>
+                        <p class="title ellipsis"><?=SiteExt::getAttr('qjpz','pcIndexImageWords')?></p>
                     </div>
                     <div class="sliderArrow fa fa-angle-down"></div>
                 </a>
@@ -128,7 +128,7 @@
         <div class="content layoutslider">
             <div class="header wow">
                 <p class="title">项目案例</p>
-                <p class="subtitle">日常装逼</p>
+                <p class="subtitle"><?=SiteExt::getAttr('qjpz','productWords')?></p>
             </div>
             <div id="category" class="hide wow">
             <?php if($cates) foreach ($cates as $key => $value) { ?>
@@ -184,7 +184,7 @@
                                 <p class="subtitle">ABOUT US</p>
                             </div>
                             <div class="des-wrap">
-                                <p class="description wow" data-wow-delay=".3s">随着社会的发展和科学技术的进步，建筑所包含的内容、所要解决的问题越来越复杂，涉及的相关学科越来越多，材料上、技术上的变化越来越迅速，单纯依靠师徒相传、经验积累的方式，已不能适应这种客观现实；加上建筑物往往要在很短时期内竣工使用，难以由匠师一身二任，客观上需要更为细致的社会分工，这就促使建筑设计逐渐形成专业，成为一门独立的分支学科。</p>
+                                <p class="description wow" data-wow-delay=".3s"><?=SiteExt::getAttr('qjpz','gongsijianjieWords')?></p>
                             </div>
                             <a href="http://mo004_1124.mo4.line1.uemo.net/page/17596/" class="more wow" data-wow-delay=".5s">MORE<i class="fa fa-angle-right"></i></a>
                             <div class="fimg wow" style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479282576383.jpg)"></div>

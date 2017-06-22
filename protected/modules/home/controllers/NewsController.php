@@ -18,7 +18,7 @@ class NewsController extends HomeController{
 
 	public function actionInfo($id=''){
 		$info = ArticleExt::model()->findByPk($id);
-		var_dump($info);exit;
+		//var_dump($info);exit;
 		if(!$info){
 			$this->redirect('list');
 		}
