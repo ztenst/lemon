@@ -1,6 +1,51 @@
 <?php
   $this->pageTitle = '常州青柠环保-首页';
 ?>
+<?php 
+    // Yii::app()->clientScript->registerCssFile("/themes/v2/static/home/style/1400.css");
+    // Yii::app()->clientScript->registerCssFile("/themes/v2/static/home/style/match-common.css");
+?>
+<style>
+    .module.mcounter ul.content_list li p {
+    text-align: center;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+.module.mcounter ul.content_list li p.number {
+    margin-top: 15px;
+}
+.module.mcounter ul.content_list li div {
+    border-right: #e9e9e9 1px solid;
+}
+.module.mcounter ul.content_list li {
+    width: 25%;
+    height: 108px;
+    float: left;
+    text-align: center;
+}
+.module.mcounter ul.content_list {
+    width: 100%;
+    height: auto;
+}
+.module.mcounter .module_container {
+    padding: 20px 0;
+}
+style.1400.css:1
+.module .module_container {
+    max-width: 1170px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+.module.mcounter ul.content_list li p.number .counterDX {
+    font-size: 54px;
+    color: #666;
+    font-family: HELVETICANEUELTPRO-THEX,Arial;
+    text-align: center;
+    margin-top: 15px;
+}
+</style>
 <div id="indexPage">
     <div id="mslider" class="module">
         <script type="text/javascript">
@@ -171,6 +216,41 @@
             <div class="clear"></div>
         </div>
     </div>
+    <div class="mcounter module" style="">
+                <div class="bgmask"></div>
+                <div id="counterBgdx" style="position:absolute; width:100%; height:100%; "></div>
+                <div class="module_container" style="background-color:white">
+                    <div class="container_content">
+                        <ul class="content_list">
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','clnf')?>"><?=SiteExt::getAttr('qjpz','clnf')?></span><span class="unit">年</span></p>
+                                    <p class="title">成立</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','fwgs')?>"><?=SiteExt::getAttr('qjpz','fwgs')?></span><span class="unit">+</span></p>
+                                    <p class="title">服务</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','xmgs')?>"><?=SiteExt::getAttr('qjpz','xmgs')?></span><span class="unit">+</span></p>
+                                    <p class="title">项目</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','khs')?>"><?=SiteExt::getAttr('qjpz','khs')?></span><span class="unit">+</span></p>
+                                    <p class="title">客户</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
     <!--project-->
     <div id="mpage" class="module">
         <div class="bgmask"></div>
@@ -299,14 +379,14 @@
             </div>
             <div id="contactlist" class="fw">
                 <div id="contactinfo" class="fl wow" data-wow-delay=".2s">
-                    <h3 class="ellipsis name">网站建设文化传播有限公司</h3>
-                    <p class="ellipsis add"><span>地点：</span>中国地区XX分区5A写字楼8-88室</p>
-                    <p class="ellipsis zip"><span>邮编：</span>100000</p>
-                    <p class="ellipsis tel"><span>电话：</span>400-888-8888</p>
-                    <p class="ellipsis mobile"><span>手机：</span>188-666-5188</p>
-                    <p class="ellipsis fax"><span>传真：</span>000-66668888</p>
-                    <p class="ellipsis email"><span>邮箱：</span>website@qq.com</p>
-                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="http://resources.jsmo.xin/templates/upload/1/201508/1438424052624.jpg"><i class="fa fa-weixin"></i></a></div>
+                    <h3 class="ellipsis name">常州青柠环保科技有限公司</h3>
+                    <p class="ellipsis add"><span>地点：</span><?=SiteExt::getAttr('qjpz','address')?></p>
+                    <p class="ellipsis zip"><span>邮编：</span><?=SiteExt::getAttr('qjpz','yb')?></p>
+                    <p class="ellipsis tel"><span>电话：</span><?=SiteExt::getAttr('qjpz','tel')?></p>
+                    <p class="ellipsis mobile"><span>手机：</span><?=SiteExt::getAttr('qjpz','sitePhone')?></p>
+                    <!-- <p class="ellipsis fax"><span>传真：</span>000-66668888</p> -->
+                    <p class="ellipsis email"><span>邮箱：</span><?=SiteExt::getAttr('qjpz','mail')?></p>
+                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','wxQr'))?>"><i class="fa fa-weixin"></i></a></div>
                 </div>
                 <div id="contactform" class="fr wow" data-wow-delay=".2s">
                     <form action="http://mo004_1124.mo4.line1.uemo.net/message/" method="post">

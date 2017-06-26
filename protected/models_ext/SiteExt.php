@@ -57,6 +57,9 @@ class SiteExt extends Site{
         'NewsWords'=>'',
         //联系我们文字
         'contactWords'=>'',
+        'address'=>'',
+        'yb'=>'',
+        'tel'=>'',
     ];
     public static $cateName = [
         'qjpz' => '全局配置',
@@ -72,7 +75,16 @@ class SiteExt extends Site{
             'sitePhone'=>['type'=>'text','name'=>'站点客服'],
             'qq'=>['type'=>'text','name'=>'联系qq'],
             'mail'=>['type'=>'text','name'=>'邮箱'],
+            'address'=>['type'=>'text','name'=>'地址'],
+            'yb'=>['type'=>'text','name'=>'邮编'],
+            'tel'=>['type'=>'text','name'=>'电话'],
+            'khs'=>['type'=>'text','name'=>'客户数'],
+            'xmgs'=>['type'=>'text','name'=>'项目个数'],
+            'fwgs'=>['type'=>'text','name'=>'服务个数'],
+            'clnf'=>['type'=>'text','name'=>'成立年份'],
+
             'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
+            'wxQr'=>['type'=>'image','max'=>1,'name'=>'微信二维码'],
             'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
             'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],
             'pcLxwm'=>['type'=>'image','max'=>1,'name'=>'pc联系我们广告图'],
