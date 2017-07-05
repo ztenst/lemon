@@ -4,7 +4,7 @@
   <title></title>
   <meta charset="UTF-8">
   <script type="text/javascript">
-  var exampleSocket = new WebSocket("ws://127.0.0.1:9501");
+  var exampleSocket = new WebSocket("ws://120.77.44.227:9501");
   exampleSocket.onopen = function (event) {
     exampleSocket.send("亲爱的服务器！我连上你啦！"); 
   };
