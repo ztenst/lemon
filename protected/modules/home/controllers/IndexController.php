@@ -48,4 +48,10 @@ class IndexController extends HomeController
         // var_dump($info->attributes);exit;
         $this->render('contact',['infos'=>$infos]);
     }
+
+    public function actionChat()
+    {
+        $this->layout = 'layouts/no';
+        $this->render('chat');
+    }
 }
