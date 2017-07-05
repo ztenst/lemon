@@ -12,6 +12,8 @@
   exampleSocket.onmessage = function (event) {
     console.log(event.data);
     $('#pa').append('<p>'+event.data+'&nbsp;'+'<?=date('Y-m-d H:i:s',time())?>'+'</p>');
+    div = document.getElementById('pa');
+    div.scrollTop = div.scrollHeight; 
   }
   </script>
 </head>
@@ -26,7 +28,7 @@
 </div>
 <br>
 <input  type="text" id="content">
-<button  onclick="exampleSocket.send( document.getElementById('content').value+' '+$('#name').val() )">发送</button>
+<button  onclick="exampleSocket.send( document.getElementById('content').value+' '+$('#name').val() );$('#content').val('')">发送</button>
 </div>
 </div>
 </body>
