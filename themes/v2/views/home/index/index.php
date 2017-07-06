@@ -386,9 +386,9 @@ style.1400.css:1
                     <p class="ellipsis mobile"><span>手机：</span><?=SiteExt::getAttr('qjpz','sitePhone')?></p>
                     <!-- <p class="ellipsis fax"><span>传真：</span>000-66668888</p> -->
                     <p class="ellipsis email"><span>邮箱：</span><?=SiteExt::getAttr('qjpz','mail')?></p>
-                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','wxQr'))?>"><i class="fa fa-weixin"></i></a></div>
+                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?>&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','wxQr'))?>"><i class="fa fa-weixin"></i></a></div>
                 </div>
-                <div id="contactform" class="fr wow" data-wow-delay=".2s">
+               <!--  <div id="contactform" class="fr wow" data-wow-delay=".2s">
                     <form action="http://mo004_1124.mo4.line1.uemo.net/message/" method="post">
                         <p>
                             <input type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off" />
@@ -406,7 +406,7 @@ style.1400.css:1
                             <input class="inputsub" type="submit" value="提交" />
                         </p>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
