@@ -8,7 +8,8 @@ class WxController extends ApiController
 {
 	public function actionCheck()
 	{
-		if($_GET['echostr'])
+		if($_GET['echostr']) {
 			echo json_encode(['echostr'=>$_GET['echostr']]);
+		}
 	}
 }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="青柠，常州青柠，环境检测，室内环境监测，环保">
-    <meta name="description" content="常州青柠有限公司">
+    <meta name="description" content="常州青柠环保科技有限公司">
     <meta name="author" content="YY-MO">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
