@@ -1,5 +1,5 @@
 <?php
-  $this->pageTitle = '常州青柠环保-首页';
+  $this->pageTitle = '常州青柠环保科技有限公司-首页';
 ?>
 <?php 
     // Yii::app()->clientScript->registerCssFile("/themes/v2/static/home/style/1400.css");
