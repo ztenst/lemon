@@ -56,27 +56,7 @@ style.1400.css:1
         })
         </script>
         <ul class="slider" data-options-height="600" data-options-auto="1" data-options-mode="1" data-options-pause="5" data-options-ease="ease-out">
-            <!-- <li style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479196936105.jpg)" class="active">
-                <div id="tempImage_0"></div><img style="display:none" src="http://resources.jsmo.xin/templates/upload/1124/201611/1479196936105.jpg" />
-                <div class="mask"></div>
-                <a target="_blank" href="http://mo004_1124.mo4.line1.jsmo.xin/project/">
-                    <div>
-                        <p class="title ellipsis">建筑DESIGN-产品</p>
-                        <p class="subtitle">architectural design;building design </p>
-                    </div>
-                    <div class="sliderArrow fa fa-angle-down"></div>
-                </a>
-            </li>
-            <li style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479203150577.jpg)">
-                <div id="tempImage_1"></div><img style="display:none" src="http://resources.jsmo.xin/templates/upload/1124/201611/1479203150577.jpg" />
-                <div class="mask"></div>
-                <a target="_blank">
-                    <div>
-                        <p class="title ellipsis"></p>
-                    </div>
-                    <div class="sliderArrow fa fa-angle-down"></div>
-                </a>
-            </li> -->
+           
             <?php if($imgs) foreach ($imgs as $key => $value) {?>
                 <li style="background-image:url(<?=ImageTools::fixImage($value)?>)"  class="<?=$key==0?'active':''?>">
                 <div id="tempImage_1"></div><img style="display:none" src="<?=ImageTools::fixImage($value)?>" />
@@ -298,7 +278,7 @@ style.1400.css:1
         <div class="bgmask"></div>
         <div class="content">
             <div class="header wow fadeInUp fw" data-wow-delay=".1s">
-                <p class="title">联系</p>
+                <p class="title">联系我们</p>
                 <p class="subtitle">Contact</p>
             </div>
             <div id="contactlist" class="fw">
