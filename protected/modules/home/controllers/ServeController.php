@@ -8,27 +8,25 @@ class ServeController extends HomeController{
 	 */
 	public function actionIndex()
 	{
-		$info = ArticleExt::model()->getFw()->normal()->find();
-		// var_dump($info->attributes);exit;
-		$this->render('index',['info'=>$info]);
+		$this->banner = '';
+		$criteria = new CDbCriteria;
+		$criteria->addcondition('cid=:cid');
+		$criteria->params[':cid']='44';
+		$infos = ArticleExt::model()->normal()->getList($criteria);
+		//var_dump($infos);exit;
+		$data = $infos->data;
+		//var_dump($data);exit;
+		$this->render('index',['infos'=>$data]);
 	}
 	/**
 	 * 业务项目
 	 */
 	public function actionInfo($id='')
 	{
-		$infos = ArticleExt::model()->getYw()->normal()->findAll();
-		$cates = $info = [];
-		if($infos) {
-			foreach ($infos as $key => $value) {
-				$cates[$value->id] = $value->attributes;
-			}
+		$info = ArticleExt::model()->findByPk($id);
+		if(!$info) {
+			$this->redirect('list');
 		}
-		if($id && isset($cates[$id])) {
-			$info = $cates[$id];
-		} elseif($infos) {
-			$info = $infos[0];
-		}
-		$this->render('info',['cates'=>$cates,'info'=>$info]);
+		$this->render('info',['info'=>$info]);
 	}
 }

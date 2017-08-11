@@ -1,9 +1,9 @@
 <?php
-$this->pageTitle = '上海弘钢机械设备管理后台欢迎您';
+$this->pageTitle = '常州青柠环保科技管理后台欢迎您';
 ?>
 <style type="text/css">
     .page-content{
        background: #F1F3FA;
     }
     </style>
-<h3>上海弘钢机械设备管理后台欢迎您</h3>
+<h3>常州青柠环保科技管理后台欢迎您</h3>

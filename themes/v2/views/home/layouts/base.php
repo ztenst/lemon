@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="青柠，常州青柠，环境检测，室内环境监测，环保">
-    <meta name="description" content="常州青柠有限公司">
+    <meta name="360-site-verification" content="431ffcf9c88d250c969166caa9ed4e31" />
+    <meta name="baidu-site-verification" content="N81pqVFXV4" />
+    <meta name="keywords" content="常州青柠环保科技有限公司，常州青柠，环境检测，室内环境监测，环保">
+    <meta name="description" content="常州青柠环保科技有限公司">
     <meta name="author" content="YY-MO">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -14,7 +16,10 @@
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/home/style/style.css">
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/home/style/1124.css">
     <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl?>/static/home/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl?>/static/home/js/org1480746227.js" data-main="indexMain"></script>
+    <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl?>/static/home/js/org1480746227.js" data-main="<?=$this->jsObj?>"></script>
+    <style>
+        a[href="http://www.uemo.net"]{display:none}
+    </style>
     <title><?=$this->pageTitle?></title>
 </head>
 

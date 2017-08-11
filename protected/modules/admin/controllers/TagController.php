@@ -18,11 +18,13 @@ class TagController extends AdminController{
         $data = TagExt::model()->findAll(array(
             'order' => 'sort asc'
         ));
+        //var_dump($data);exit;
         $list = array();
         foreach ($data as $v) {
             $list[$v->cate][] = $v;
         }
         asort($list);
+        //var_dump($list);exit;
         $this->render('list', array(
             'list' => $list,
         ));

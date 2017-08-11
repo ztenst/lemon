@@ -6,6 +6,9 @@
  */
 class HomeController extends Controller
 {
+    public $jsObj='baseMain';
+ 
+
     //关键字
     private $keyword;
 
