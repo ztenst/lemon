@@ -69,6 +69,12 @@ style.1400.css:1
                 </a>
             </li>
             <?php } ?>
+            <li>
+                    <embed src='http://player.youku.com/player.php/sid/XMjc0NDUwOTk0OA==/v.swf' style="width:100%;height: 100%"></embed>
+                <a target="_blank">
+                    <div class="sliderArrow fa fa-angle-down"></div>
+                </a>
+            </li>
         </ul>
     </div>
     <div id="mindex" data-options-ease="Expo.easeInOut" data-options-speed="1" data-options-sscreen="0"></div>
