@@ -8,7 +8,7 @@ class ArticleExt extends Article{
     /**
      * @var array 状态
      */
-    static $cates=[44,45,52,56,57,58,59,60,61];
+    static $cates=[44,45,52,57,58,59,60,61];
 
     static $status = array(
         0 => '禁用',
