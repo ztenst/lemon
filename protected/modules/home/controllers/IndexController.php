@@ -40,11 +40,18 @@ class IndexController extends HomeController
 
     public function actionContact()
     {
+        $this->banner = '';
         $criteria = new CDbCriteria;
         $criteria->addcondition('cid=:cid');
         $criteria->params[':cid']='52';
         $infos = ArticleExt::model()->normal()->find($criteria);
         // var_dump($info->attributes);exit;
         $this->render('contact',['infos'=>$infos]);
+    }
+
+    public function actionChat()
+    {
+        $this->layout = 'layouts/no';
+        $this->render('chat');
     }
 }

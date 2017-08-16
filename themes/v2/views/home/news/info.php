@@ -11,7 +11,7 @@
                     <table>
                         <tbody>
                             <tr class="firstRow">
-                                <td valign="top" width="569"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479445466633.jpg" title="undefined" alt="undefined" /></td>
+                                <td valign="top" width="569"><img src="<?=ImageTools::fixImage($info->image)?>" /></td>
                                 <td style="word-break: break-all;" valign="top" width="569">
                                     
                                     <p><?=$info->content?></p>

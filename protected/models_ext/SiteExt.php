@@ -45,7 +45,21 @@ class SiteExt extends Site{
         'clnf'=>'0',
         // 首页头图文字
         'pcIndexImageWords'=>'',
-
+        //项目案例文案
+        'productWords'=>'',
+        //公司简介图片
+        'gongsijianjieImages'=>[],
+        //服务范围图片
+        'fuwufanweiImages'=>[],
+        //公司简介文字
+        'gongsijianjieWords'=>'',
+        //资讯中心文字
+        'NewsWords'=>'',
+        //联系我们文字
+        'contactWords'=>'',
+        'address'=>'',
+        'yb'=>'',
+        'tel'=>'',
     ];
     public static $cateName = [
         'qjpz' => '全局配置',
@@ -56,10 +70,21 @@ class SiteExt extends Site{
         'qjpz'=> [
             'pcIndexImages'=>['type'=>'multiImage','max'=>4,'name'=>'pc首页轮播图'],
             'pcLogo'=>['type'=>'image','max'=>1,'name'=>'pc版logo'],
+            'gongsijianjieImages'=>['type'=>'image','max'=>1,'name'=>'公司简介图片'],
+            'fuwufanweiImages'=>['type'=>'image','max'=>1,'name'=>'服务范围图片'],
             'sitePhone'=>['type'=>'text','name'=>'站点客服'],
             'qq'=>['type'=>'text','name'=>'联系qq'],
             'mail'=>['type'=>'text','name'=>'邮箱'],
+            'address'=>['type'=>'text','name'=>'地址'],
+            'yb'=>['type'=>'text','name'=>'邮编'],
+            'tel'=>['type'=>'text','name'=>'电话'],
+            'khs'=>['type'=>'text','name'=>'客户数'],
+            'xmgs'=>['type'=>'text','name'=>'项目个数'],
+            'fwgs'=>['type'=>'text','name'=>'服务个数'],
+            'clnf'=>['type'=>'text','name'=>'成立年份'],
+
             'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
+            'wxQr'=>['type'=>'image','max'=>1,'name'=>'微信二维码'],
             'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
             'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],
             'pcLxwm'=>['type'=>'image','max'=>1,'name'=>'pc联系我们广告图'],
@@ -67,6 +92,10 @@ class SiteExt extends Site{
             // 'pcIndexServe'=>['type'=>'image','max'=>1,'name'=>'pc首页服务背景图'],
             'pcNewsTop'=>['type'=>'image','max'=>1,'name'=>'pc资讯列表头图'],
             'pcIndexImageWords'=>['type'=>'text','name'=>'首页头图文字'],
+            'productWords'=>['type'=>'text','name'=>'项目案例文字'],
+            'gongsijianjieWords'=>['type'=>'text','name'=>'公司简介文字'],
+            'contactWords'=>['type'=>'text','name'=>'联系我们文字'],
+            'NewsWords'=>['type'=>'text','name'=>'咨询中心文字'],
             // 'pcContactTop'=>['type'=>'image','max'=>1,'name'=>'pc联系列表头图'],
             // 'pcServeTop'=>['type'=>'image','max'=>1,'name'=>'pc服务列表头图'],
             // 'pcTeamTop'=>['type'=>'image','max'=>1,'name'=>'pc团队列表头图'],

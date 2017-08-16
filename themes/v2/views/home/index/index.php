@@ -1,6 +1,51 @@
 <?php
-  $this->pageTitle = '常州青柠环保-首页';
+  $this->pageTitle = '常州青柠环保科技有限公司-首页';
 ?>
+<?php 
+    // Yii::app()->clientScript->registerCssFile("/themes/v2/static/home/style/1400.css");
+    // Yii::app()->clientScript->registerCssFile("/themes/v2/static/home/style/match-common.css");
+?>
+<style>
+    .module.mcounter ul.content_list li p {
+    text-align: center;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+.module.mcounter ul.content_list li p.number {
+    margin-top: 15px;
+}
+.module.mcounter ul.content_list li div {
+    border-right: #e9e9e9 1px solid;
+}
+.module.mcounter ul.content_list li {
+    width: 25%;
+    height: 108px;
+    float: left;
+    text-align: center;
+}
+.module.mcounter ul.content_list {
+    width: 100%;
+    height: auto;
+}
+.module.mcounter .module_container {
+    padding: 20px 0;
+}
+style.1400.css:1
+.module .module_container {
+    max-width: 1170px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+.module.mcounter ul.content_list li p.number .counterDX {
+    font-size: 54px;
+    color: #666;
+    font-family: HELVETICANEUELTPRO-THEX,Arial;
+    text-align: center;
+    margin-top: 15px;
+}
+</style>
 <div id="indexPage">
     <div id="mslider" class="module">
         <script type="text/javascript">
@@ -11,27 +56,7 @@
         })
         </script>
         <ul class="slider" data-options-height="600" data-options-auto="1" data-options-mode="1" data-options-pause="5" data-options-ease="ease-out">
-            <!-- <li style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479196936105.jpg)" class="active">
-                <div id="tempImage_0"></div><img style="display:none" src="http://resources.jsmo.xin/templates/upload/1124/201611/1479196936105.jpg" />
-                <div class="mask"></div>
-                <a target="_blank" href="http://mo004_1124.mo4.line1.jsmo.xin/project/">
-                    <div>
-                        <p class="title ellipsis">建筑DESIGN-产品</p>
-                        <p class="subtitle">architectural design;building design </p>
-                    </div>
-                    <div class="sliderArrow fa fa-angle-down"></div>
-                </a>
-            </li>
-            <li style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479203150577.jpg)">
-                <div id="tempImage_1"></div><img style="display:none" src="http://resources.jsmo.xin/templates/upload/1124/201611/1479203150577.jpg" />
-                <div class="mask"></div>
-                <a target="_blank">
-                    <div>
-                        <p class="title ellipsis"></p>
-                    </div>
-                    <div class="sliderArrow fa fa-angle-down"></div>
-                </a>
-            </li> -->
+           
             <?php if($imgs) foreach ($imgs as $key => $value) {?>
                 <li style="background-image:url(<?=ImageTools::fixImage($value)?>)"  class="<?=$key==0?'active':''?>">
                 <div id="tempImage_1"></div><img style="display:none" src="<?=ImageTools::fixImage($value)?>" />
@@ -47,88 +72,12 @@
         </ul>
     </div>
     <div id="mindex" data-options-ease="Expo.easeInOut" data-options-speed="1" data-options-sscreen="0"></div>
-    <!-- <div id="mservice" class="module">
-        <div class="bgmask"></div>
-        <div class="content layoutslider">
-            <div class="header wow fw" data-wow-delay=".1s">
-                <p class="title">服务范围</p>
-                <p class="subtitle">—— SERVICE ——</p>
-            </div>
-            <div class="module-content fw" id="servicelist">
-                <div class="wrapper">
-                    <ul class="content_list" data-options-sliders="4" data-options-margin="50" data-options-ease="u65e0" data-options-speed="0">
-                        <li id="serviceitem_0" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4251/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479215822711.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">科技 science</p>
-                                    <p class="description">社会上习惯于把科学和技术联在一起，统称为“科技”。实际二者既有密切联系，又有重要区别。</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4251/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_1" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4250/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479215891915.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">建设 Factory</p>
-                                    <p class="description">建筑是建筑物与构筑物的总称，是人们为了满足社会生活需要，利用所掌握的物质技术手段...</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4250/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_2" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4249/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479215970107.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">信息 Information</p>
-                                    <p class="description">信息，指音讯、消息、通讯系统传输和处理的对象，泛指人类社会传播的一切内容。</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4249/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_3" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4248/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479218041538.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">网络资源 Network resources</p>
-                                    <p class="description">网络资源，是利用计算机系统通过通信设备传播和网络软件管理的信息资源。</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4248/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_4" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4247/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479218052105.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">广告 Advertising</p>
-                                    <p class="description">广告是为了某种特定的需要，通过一定形式的媒体，公开而广泛地向公众传递信息的宣传手段。</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4247/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_5" class="serviceitem wow">
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4246/" target="_blank">
-                                <p class="service_img"><img src="http://resources.jsmo.xin/templates/upload/1124/201611/1479218115361.png" width="320" height="120" /></p>
-                                <div class="service_info">
-                                    <p class="title">资产管理 Assets</p>
-                                    <p class="description">Now on three integrated deployment modelspublic dedicated and local</p>
-                                </div>
-                            </a>
-                            <a href="http://mo004_1124.mo4.line1.uemo.net/service/post/4246/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <a href="http://mo004_1124.mo4.line1.uemo.net/service/" class="more wow">MORE<i class="fa fa-angle-right"></i></a></div>
-    </div> -->
     <div id="mproject" class="module">
         <div class="bgmask"></div>
         <div class="content layoutslider">
             <div class="header wow">
                 <p class="title">项目案例</p>
-                <p class="subtitle">日常装逼</p>
+                <p class="subtitle"><?=SiteExt::getAttr('qjpz','productWords')?></p>
             </div>
             <div id="category" class="hide wow">
             <?php if($cates) foreach ($cates as $key => $value) { ?>
@@ -171,6 +120,41 @@
             <div class="clear"></div>
         </div>
     </div>
+    <div class="mcounter module" style="">
+                <div class="bgmask"></div>
+                <div id="counterBgdx" style="position:absolute; width:100%; height:100%; "></div>
+                <div class="module_container" style="background-color:white">
+                    <div class="container_content">
+                        <ul class="content_list">
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','clnf')?>"><?=SiteExt::getAttr('qjpz','clnf')?></span><span class="unit">年</span></p>
+                                    <p class="title">成立</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','fwgs')?>"><?=SiteExt::getAttr('qjpz','fwgs')?></span><span class="unit">+</span></p>
+                                    <p class="title">服务</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','xmgs')?>"><?=SiteExt::getAttr('qjpz','xmgs')?></span><span class="unit">+</span></p>
+                                    <p class="title">项目</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','khs')?>"><?=SiteExt::getAttr('qjpz','khs')?></span><span class="unit">+</span></p>
+                                    <p class="title">客户</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
     <!--project-->
     <div id="mpage" class="module">
         <div class="bgmask"></div>
@@ -184,7 +168,7 @@
                                 <p class="subtitle">ABOUT US</p>
                             </div>
                             <div class="des-wrap">
-                                <p class="description wow" data-wow-delay=".3s">随着社会的发展和科学技术的进步，建筑所包含的内容、所要解决的问题越来越复杂，涉及的相关学科越来越多，材料上、技术上的变化越来越迅速，单纯依靠师徒相传、经验积累的方式，已不能适应这种客观现实；加上建筑物往往要在很短时期内竣工使用，难以由匠师一身二任，客观上需要更为细致的社会分工，这就促使建筑设计逐渐形成专业，成为一门独立的分支学科。</p>
+                                <p class="description wow" data-wow-delay=".3s"><?=SiteExt::getAttr('qjpz','gongsijianjieWords')?></p>
                             </div>
                             <a href="http://mo004_1124.mo4.line1.uemo.net/page/17596/" class="more wow" data-wow-delay=".5s">MORE<i class="fa fa-angle-right"></i></a>
                             <div class="fimg wow" style="background-image:url(http://resources.jsmo.xin/templates/upload/1124/201611/1479282576383.jpg)"></div>
@@ -294,21 +278,21 @@
         <div class="bgmask"></div>
         <div class="content">
             <div class="header wow fadeInUp fw" data-wow-delay=".1s">
-                <p class="title">联系</p>
+                <p class="title">联系我们</p>
                 <p class="subtitle">Contact</p>
             </div>
             <div id="contactlist" class="fw">
                 <div id="contactinfo" class="fl wow" data-wow-delay=".2s">
-                    <h3 class="ellipsis name">网站建设文化传播有限公司</h3>
-                    <p class="ellipsis add"><span>地点：</span>中国地区XX分区5A写字楼8-88室</p>
-                    <p class="ellipsis zip"><span>邮编：</span>100000</p>
-                    <p class="ellipsis tel"><span>电话：</span>400-888-8888</p>
-                    <p class="ellipsis mobile"><span>手机：</span>188-666-5188</p>
-                    <p class="ellipsis fax"><span>传真：</span>000-66668888</p>
-                    <p class="ellipsis email"><span>邮箱：</span>website@qq.com</p>
-                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="http://resources.jsmo.xin/templates/upload/1/201508/1438424052624.jpg"><i class="fa fa-weixin"></i></a></div>
+                    <h3 class="ellipsis name">常州青柠环保科技有限公司</h3>
+                    <p class="ellipsis add"><span>地点：</span><?=SiteExt::getAttr('qjpz','address')?></p>
+                    <p class="ellipsis zip"><span>邮编：</span><?=SiteExt::getAttr('qjpz','yb')?></p>
+                    <p class="ellipsis tel"><span>电话：</span><?=SiteExt::getAttr('qjpz','tel')?></p>
+                    <p class="ellipsis mobile"><span>手机：</span><?=SiteExt::getAttr('qjpz','sitePhone')?></p>
+                    <!-- <p class="ellipsis fax"><span>传真：</span>000-66668888</p> -->
+                    <p class="ellipsis email"><span>邮箱：</span><?=SiteExt::getAttr('qjpz','mail')?></p>
+                    <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?>&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> <a id="mpbtn" class="fl" href="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','wxQr'))?>"><i class="fa fa-weixin"></i></a></div>
                 </div>
-                <div id="contactform" class="fr wow" data-wow-delay=".2s">
+               <!--  <div id="contactform" class="fr wow" data-wow-delay=".2s">
                     <form action="http://mo004_1124.mo4.line1.uemo.net/message/" method="post">
                         <p>
                             <input type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off" />
@@ -326,7 +310,7 @@
                             <input class="inputsub" type="submit" value="提交" />
                         </p>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

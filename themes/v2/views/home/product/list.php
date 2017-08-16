@@ -4,7 +4,7 @@
             <div class="content">
                 <div class="header" id="plheader">
                     <p class="title">项目案例</p>
-                    <p class="subtitle">静静装逼</p>
+                    <p class="subtitle"><?=SiteExt::getAttr('qjpz','productWords')?></p>
                 </div>
                 <ul id="category">
                  <li ><a  class="<?=!$cate?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>"><?='不限'?></a></li>
