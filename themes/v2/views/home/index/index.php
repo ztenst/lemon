@@ -70,7 +70,7 @@ style.1400.css:1
             </li>
             <?php } ?>
             <li>
-                    <embed src='http://player.youku.com/player.php/sid/XMjc0NDUwOTk0OA==/v.swf' style="width:100%;height: 100%"></embed>
+                    <embed src='/m1.mp4' style="width:100%;height: 100%"></embed>
                 <a target="_blank">
                     <div class="sliderArrow fa fa-angle-down"></div>
                 </a>
