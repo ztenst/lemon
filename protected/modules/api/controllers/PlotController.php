@@ -174,4 +174,16 @@ class PlotController extends ApiController
         }
         echo json_encode($data);
     }
+
+    public function actionTest()
+    {
+        $img = SiteExt::getAttr('qjpz','pcIndexImages');
+        $imgarr = [];
+        if($img) {
+            foreach ($img as $key => $value) {
+                $imgarr[] = ImageTools::fixImage($value);
+            }
+        }
+        echo json_encode($imgarr);
+    }
 }
