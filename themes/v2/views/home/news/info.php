@@ -14,7 +14,7 @@
                             <?php if($info->image): ?>
                                 <td valign="top" width="569"><img src="<?=ImageTools::fixImage($info->image)?>" /></td>
                             <?php endif;?>
-                                <td style="word-break: break-all;" valign="top" width="569">
+                                <td style="word-break: break-all;" valign="top" width="">
                                     
                                     <p><?=$info->content?></p>
                                 </td>
